@@ -43,11 +43,9 @@ const playMusic = (track, check) => {
     jsmediatags.read(track, {
         onSuccess: function(tag) {
             console.log(tag)
-            title = track.split("/Songs/")[1].replaceAll("%20", " ").split(" - ")[0].trim()
-            artist = track.split("/Songs/")[1].replaceAll("%20", " ").split(" - ")[1].split(".m")[0].trim()
-            title = (tag.tags.title) ? tag.tags.title : title;
+            title = (tag.tags.title) ? tag.tags.title : track.split("/Songs/")[1].replaceAll("%20", " ").split(" - ")[0].trim();
             console.log(title)
-            artist = (tag.tags.artist) ? tag.tags.artist : artist;
+            artist = (tag.tags.artist) ? tag.tags.artist : track.split("/Songs/")[1].replaceAll("%20", " ").split(" - ")[1].split(".m")[0].trim();
             const data = tag.tags.picture.data;
             const format = tag.tags.picture.format;
             let base64String = "";
@@ -80,11 +78,9 @@ async function main() {
         jsmediatags.read(song, {
             onSuccess: function(tag) {
                 console.log(tag)
-                title = song.split("/Songs/")[1].replaceAll("%20", " ").split(" - ")[0].trim()
-                artist = song.split("/Songs/")[1].replaceAll("%20", " ").split(" - ")[1].split(".m")[0].trim()
-                title = (tag.tags.title) ? tag.tags.title : title;
+                title = (tag.tags.title) ? tag.tags.title : song.split("/Songs/")[1].replaceAll("%20", " ").split(" - ")[0].trim();
                 console.log(title)
-                artist = (tag.tags.artist) ? tag.tags.artist : artist;
+                artist = (tag.tags.artist) ? tag.tags.artist : song.split("/Songs/")[1].replaceAll("%20", " ").split(" - ")[1].split(".m")[0].trim();
                 const data = tag.tags.picture.data;
                 const format = tag.tags.picture.format;
                 let base64String = "";
