@@ -1,7 +1,9 @@
 console.log("Hello World")
 
 async function getSongs() {
-    let a = await fetch("http://127.0.0.1:3000/Songs")
+    let url = window.location.href.split("index.html")[0] + "Songs"
+    console.log(url)
+    let a = await fetch(url)
     let response = await a.text();
     console.log(response)
     let div = document.createElement("div")
