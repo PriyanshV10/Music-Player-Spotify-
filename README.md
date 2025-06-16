@@ -17,12 +17,6 @@ A lightweight web-based music player inspired by Spotify's design. This project 
 - **CSS3**
 - **JavaScript (Vanilla)**
 
-## 📸 Screenshots
-
-> *(Add your screenshots here in `assets/` folder)*  
-> Example:  
-> ![Home Page](assets/home.png)
-
 ## 📂 Project Structure
 
 ```
